@@ -1,0 +1,43 @@
+.nav
+  font-size: 0
+  li
+    display: inline-block
+  a
+    display: block
+    font-size: 16px
+    +reg
+    color: $accent
+    +tr(color .3s, background-color .3s)
+    padding: 30px 15px
+    &.is-active
+      +semi
+      background-color: #eaf0ef
+    +hover
+      // +semi
+      background-color: #eaf0ef
+
+.types-nav
+  +flex()
+  &__link
+    position: relative
+    +cover
+    padding-top: 4%
+    width: 25%
+    display: block
+    +bold
+    font-size: 16px
+    color: $white
+    +hover
+      font-size: 21px
+      +before
+        visibility: hidden
+        opacity: 0
+    +before
+      background-color: rgba($accent, .7)
+      +coverdiv
+      z-index: 0
+    span
+      position: relative
+      z-index: 1
+      display: inline-block
+      +vcenter

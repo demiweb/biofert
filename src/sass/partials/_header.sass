@@ -1,0 +1,48 @@
+.header
+  &__top
+    background-color: $white
+    height: $hd-top
+  &__bottom
+    background-color: $accent
+    padding-top: 8px
+    padding-bottom: 8px
+    height: $hd-bottom
+  &__inner
+    +flex(space-between, center)
+  &__title
+    font-size: 16px
+    text-transform: uppercase
+    color: $white
+    +reg
+  &__btns
+    +flex()
+    .social
+      margin-left: 40px
+
+.contacts
+
+.contact
+  +bold
+  color: $black
+  display: block
+
+.logo
+  display: block
+
+.lang
+  color: $accent
+  a
+    text-transform: uppercase
+    color: $accent
+    font-size: 16px
+    +reg
+  li
+    position: relative
+    padding-right: 15px
+    +before
+      +icon-arrow(6, 6, 1, currentColor, -45)
+      display: inline-block
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translate(0, -50%) rotate(-45deg)

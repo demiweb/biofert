@@ -1,0 +1,30 @@
+{%set
+cultures = [
+  { title: 'Зерновые', img: 'wheat.png' },
+  { title: 'Овощные', img: 'grossery.png' },
+  { title: 'Кукуруза', img: 'corn.png' },
+  { title: 'Соя', img: 'soybean.png' },
+  { title: 'Подсолнечник', img: 'sunflower.png' },
+  { title: 'Плодово-ягодные', img: 'blueberries.png' },
+  { title: 'Рапс', img: 'raps.png' },
+  { title: 'Сахарная свекла', img: 'saharnaya-svekla.png' }
+]
+%}
+
+<!-- begin cultures -->
+<div class="cultures">
+  {% for i in cultures %}
+  <!-- begin culture -->
+  <a href="#" class="culture">
+    <div class="culture__title">
+      <h4 class="h4">{{ i.title }}</h4>
+    </div>
+
+    <div class="culture__img">
+      <img class="js-lazy" data-src="img/cultures/{{ i.img }}" alt="">
+    </div>
+  </a>
+  <!-- end culture -->
+  {% endfor %}
+</div>
+<!-- end cultures -->

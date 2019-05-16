@@ -1,0 +1,70 @@
+<!-- begin header -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__inner">
+      <div class="header__logo">
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      </div>
+
+      <div class="header__nav">
+        {{ mixins.list(
+          name = 'nav',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { item: '', link: 'Про компанію', modItem: '', modLink: '' },
+            { item: '', link: 'Продукція', modItem: '', modLink: '' },
+            { item: '', link: 'Системи живлення', modItem: '', modLink: 'is-active' },
+            { item: '', link: 'Партнери', modItem: '', modLink: '' },
+            { item: '', link: 'Новини', modItem: '', modLink: '' },
+            { item: '', link: 'Контакти', modItem: '', modLink: '' }
+          ]
+        ) }}
+      </div>
+
+      <div class="header__lang">
+        {{ mixins.list(
+          name = 'lang',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { item: '', link: 'Ru', modItem: '', modLink: '' }
+          ]
+        ) }}
+      </div>
+
+      <div class="header__contacts">
+        <!-- begin contacts -->
+        <div class="contacts">
+          <a href="tel:+380352225512" class="contact is-accent">+38 (0352) 22-55-12</a>
+          <a href="tel:+380676797940" class="contact">+38 (067) 67-97-940</a>
+          <a class="btn-link" href="#">{{ mixins.icon('phone', false) }} Замовити дзвінок</a>
+        </div>
+        <!-- end contacts -->
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__title">Мінеральні добрива нового покоління для вашого грунту</div>
+
+        <div class="header__btns">
+          <a href="#" class="download" download="">
+            {{ mixins.icon('pdf') }}
+            Завантажити каталог продукції
+          </a>
+
+          {{ mixins.list(
+            name = 'social social--light',
+            list = [
+              { link:  mixins.icon('facebook') }
+            ]
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->

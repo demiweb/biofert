@@ -1,0 +1,23 @@
+<!-- begin hero -->
+<section class="hero">
+  <!-- begin slider -->
+  <div class="slider__wrap slider--banner__wrap">
+    <div class="slider slider--banner js-slider" data-slider="banner">
+      {% for i in range(0, 5) %}
+      <a href="#" class="slide">
+        <span class="slide__img js-lazy" data-background-image="img/banner.jpg"></span>
+      </a>
+      {% endfor %}
+    </div>
+    
+    <div class="slider__dots js-dots"></div>
+    <div class="slider__arrows">
+      <a href="#" class="slider__prev js-prev"></a>
+      <a href="#" class="slider__next js-next"></a>
+    </div>
+    
+  </div>
+  <!-- end slider -->
+  
+</section>
+<!-- end hero -->

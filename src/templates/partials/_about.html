@@ -1,0 +1,65 @@
+<!-- begin section -->
+<section class="section section--light">
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="section__title">
+          <h2 class="h2">Наша компанія - єдина в Україні пропонує сертифіковані товари за всіма правилами ТОВ</h2>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    
+
+    <div class="row align-items-center">
+      <div class="col-5">
+        <!-- begin slider -->
+        <div class="slider__wrap slider--about__wrap">
+          <div class="slider js-slider" data-slider="about">
+            {% for i in range(0, 5) %}
+            <div class="slide">
+              <div class="slide__img">
+                <img class="js-lazy" data-src="img/bag.png" alt="">
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="slider__dots js-dots"></div>
+        </div>
+        <!-- end slider -->
+      </div>
+
+      <div class="col-7">
+        <!-- begin text-block -->
+        <div class="text-block text">
+          <div class="text-block__text text">
+            <div class="text-block__title">
+              <h4 class="h4">Про компанію</h4>
+            </div>
+
+            <p>ТОВ "Біоферт" - офіційний дистриб'ютор і партнер провідних Європейських виробників мінеральних добрив. На сьогоднішній день ТОВ «Біоферт» - сучасна, молода компанія, яка динамічно розвивається і активно завойовує Український і Європейський ринки. Мета нашої компанії - забезпечення аграріїв якісними та ефективними елементами живлення за помірною ціною. Ми використовуємо індивідуальний підхід до кожного з наших клієнтів і надаємо вичерпну інформацію щодо використання нашої продукції. Мета нашої компанії - забезпечення аграріїв якісними та ефективними елементами живлення за помірною ціною.</p>
+          </div>
+
+          <div class="text-block__btns">
+            <div class="text-block__btn">
+              {{ mixins.btn(
+                title = 'Дізнатися про компанію',
+                mod = ''
+              ) }}
+            </div>
+            <div class="text-block__btn">
+              {{ mixins.btn(
+                title = 'Перейти до продукції',
+                mod = ''
+              ) }}
+            </div>
+          </div>
+        </div>
+        <!-- end text-block -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,124 @@
+.slide
+  display: block
+
+.slider
+  $this: &
+  font-size: 0
+  &__wrap
+    position: relative
+  &__dots
+    background-color: $accent
+    padding: 16px 12px 12px
+    min-width: 220px
+    text-align: center
+    font-size: 0
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 0)
+    li
+      display: inline-block
+      margin-right: 5px
+      margin-left: 5px
+      &.slick-active
+        button
+          +before
+            visibility: visible
+            opacity: 1
+    button
+      background-color: $white
+      +hidetext
+      height: 10px
+      width: 10px
+      border-radius: 50%
+      position: relative
+      +before
+        z-index: 0
+        height: 18px
+        width: 18px
+        display: inline-block
+        +vcenter
+        border-radius: 50%
+        background-color: rgba($white, .15)
+        visibility: hidden
+        opacity: 0
+        +tr(opacity .3s, visibility .3s)
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    height: 30px
+    width: 30px
+    border: 2px solid $white
+    border-radius: 50%
+    +before
+      display: inline-block
+      position: absolute
+      top: 50%
+  &__arrows
+    @extend .container
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    left: 50%
+    
+  &__prev
+    left: 0
+    +before
+      +icon-arrow(8, 8, 2, $white, 45)
+      transform: translate(0, -50%) rotate(45deg)
+      left: 10px
+  &__next
+    right: 0
+    +before
+      +icon-arrow(8, 8, 2, $white, -135)
+      transform: translate(0, -50%) rotate(-135deg)
+      right: 10px
+
+
+  &--banner
+    .slide
+      &__img
+        display: block
+        +cover
+        height: calc(100vh - #{$hd-top} - #{$hd-bottom})
+        width: 100%
+        background-color: $c-text
+    &__wrap
+      .slider
+        &__dots
+          
+  &--about
+    .slide
+      &__img
+
+    &__wrap
+      .slider
+        &__dots
+          background-color: transparent
+          min-width: 0
+          button
+            height: 34px
+            width: 15px
+            border-radius: 0
+            background-color: transparent
+            +before
+              display: none
+            +after
+              +vcenter
+              height: 100%
+              width: 2px
+              background-color: #9b9b9b
+              display: block
+          li
+            margin-right: 2px
+            margin-left: 2px
+            &.slick-active
+              button
+                +after
+                  height: calc(100% + 14px)
+                  background-color: $accent
+
+
+

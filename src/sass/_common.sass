@@ -1,0 +1,101 @@
++font('opensans-regular', 'opensans-regular-webfont')
++font('opensans-bold', 'opensans-bold-webfont')
++font('opensans-semibold', 'opensans-semibold-webfont')
+
+=reg
+  font-family: 'opensans-regular', Arial, sans-serif
+=bold
+  font-family: 'opensans-bold', Arial, sans-serif
+=semi
+  font-family: 'opensans-semibold', Arial, sans-serif
+
+=lg
+  +r(1199)
+    @content
+=md
+  +r(991)
+    @content
+=sm
+  +r(767)
+    @content
+=xs
+  +r(575)
+    @content
+
+=lgmin
+  +r(1200)
+    @content
+=mdmin
+  +r(992)
+    @content
+=smmin
+  +r(768)
+    @content
+=xsmin
+  +r(576)
+    @content
+
+
+body
+  background: #FFF
+  line-height: 1.4
+  font-size: 16px
+  +reg
+  color: $c-text
+  +no-scroll
+
+img
+  max-width: 100%
+
+.icon
+  display: inline-block
+
+.btn
+  display: inline-block
+  text-align: center
+  min-width: 253px
+  padding: 14px
+  border: 1px solid $accent
+  background-color: transparent
+  color: $accent
+  +reg
+  font-size: 16px
+  +tr(color .3s, background-color .3s)
+  +hover
+    background-color: $accent
+    color: $white
+    +bold
+
+.btn-link
+  color: #595959
+  font-size: 13px
+  +reg
+  text-decoration: underline
+  +inline-flex(flex-start, center)
+  .icon
+    fill: currentColor
+    font-size: 16px
+    margin-right: 5px
+
+.download
+  color: $white
+  font-size: 16px
+  +reg
+  +inline-flex(flex-start, center)
+  text-decoration: underline
+  .icon
+    margin-right: 14px
+
+.text-block
+  &__title
+    margin-bottom: 15px
+  &__text
+      margin-bottom: 15px
+  &__btns
+    font-size: 0
+  &__btn
+    display: inline-block
+    vertical-align: top
+    +notlast
+      margin-right: 10px
+
