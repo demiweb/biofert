@@ -1,7 +1,13 @@
 .nav
   font-size: 0
+  +md
+    padding-top: 75px
+    overflow: auto
   li
     display: inline-block
+    +lg
+      display: block
+      text-align: center
   a
     display: block
     font-size: 16px
@@ -9,6 +15,8 @@
     color: $accent
     +tr(color .3s, background-color .3s)
     padding: 30px 15px
+    +lg
+      padding: 10px 10px
     &.is-active
       +semi
       background-color: #eaf0ef
@@ -17,10 +25,16 @@
       background-color: #eaf0ef
 
   &--footer
+    +md
+      padding-top: 0
     li
       display: block
       +notlast
         margin-bottom: 20px
+      +lg
+        text-align: left
+        +notlast
+          margin-bottom: 10px
     a
       padding: 0
       color: $green-light
@@ -28,9 +42,11 @@
         background-color: transparent
         text-decoration: underline
         color: $green
+      +lg
+        padding: 0
 
 .types-nav
-  +flex()
+  +flex(flex-start, normal, row, wrap)
   &__link
     position: relative
     +cover
@@ -49,6 +65,15 @@
       background-color: rgba($accent, .7)
       +coverdiv
       z-index: 0
+    +lg
+      padding-top: 5%
+    +md
+      padding-top: 7%
+    +sm
+      padding-top: 8%
+    +xs
+      padding-top: 12%
+      width: 50%
     span
       position: relative
       z-index: 1

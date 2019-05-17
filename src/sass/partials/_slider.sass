@@ -85,6 +85,8 @@
         height: calc(100vh - #{$hd-top} - #{$hd-bottom})
         width: 100%
         background-color: $c-text
+        +md
+          height: calc(100vh - #{$hd-top-mob})
     &__wrap
       .slider
         &__dots
@@ -98,6 +100,7 @@
         &__dots
           background-color: transparent
           min-width: 0
+          width: 100%
           button
             height: 34px
             width: 15px

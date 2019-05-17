@@ -6,16 +6,16 @@ h1, h2, h3, h4, h5, h6
 .h2, h2
   +bold
   color: $black
-  font-size: 30px
   line-height: 1.2
+  +css-lock(24, 30, 576, 1199, font-size)
 
 .h3, h3
 
 .h4, h4
   color: $black
-  font-size: 21px
   +bold
   +tr(color .3s)
+  +css-lock(18, 21, 576, 1199, font-size)
   &--white
     color: $white
 
@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6
   color: $c-text
   text-align: justify
   font-size: 16px
+  +sm
+    font-size: 14px
 
   &--center
     text-align: center

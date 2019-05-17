@@ -1,7 +1,6 @@
 .news-item
   $this: &
   height: calc(100% - 25px)
-  // box-shadow: 0px 4px 17.6px 4.4px rgba(0, 0, 0, 0.11)
   margin-bottom: 25px
   display: block
   +hover
@@ -11,12 +10,22 @@
         color: $white
   &__top
     +cover
+    background-color: $gray
     +flex(flex-end, normal, column)
     padding-left: 40px
     padding-right: 40px
     padding-bottom: 40px
     padding-top: 25%
     height: calc(100% - 85px)
+    +sm
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 20px
+    +xs
+      padding-left: 10px
+      padding-right: 10px
+      padding-bottom: 10px
+      padding-top: 40%
   &__title
     margin-bottom: 10px
   &__bottom
@@ -27,7 +36,22 @@
     background-color: $white
     box-shadow: 0px 4px 17.6px 4.4px rgba(0, 0, 0, 0.11)
     +tr(background-color .3s)
+    +sm
+      padding-left: 20px
+      padding-right: 20px
+      height: 60px
+    +xs
+      padding-left: 10px
+      padding-right: 10px
+    +xss
+      display: block
+      height: auto
+      padding-top: 10px
+      padding-bottom: 10px
   &__meta
+    +xss
+      display: block
+      padding-top: 10px
     .meta-item
       +notlast
         margin-right: 25px
@@ -36,3 +60,5 @@
   &__text
     display: block
     max-height: 80px
+    +sm
+      max-height: 60px

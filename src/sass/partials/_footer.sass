@@ -3,22 +3,62 @@
   padding-top: 40px
   padding-bottom: 40px
   color: $green-light
+  position: relative
   +reg
+  +md
+    padding-bottom: 60px
+    .nav
+      margin-bottom: 15px
+    [class*="col-"]
+      position: static
+    .container
+      position: relative
+  +xs
+    padding-top: 20px
+    padding-bottom: 110px
   &__title,
     margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
   &__logo
     margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
   &__social
     margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      position: absolute
+      top: calc(100% + 8px)
+      right: 15px
+    +xs
+      right: auto
+      left: 15px
+      top: 100%
   &__text-sm
     font-size: 13px
     max-width: 160px
+    +md
+      position: absolute
+      top: 100%
+      left: 15px
+      p
+        white-space: nowrap
+    +xs
+      top: calc(100% + 45px)
     p
       margin-bottom: 10px
   &__text
     font-size: 16px
     p
       margin-bottom: 25px
+      +md
+        margin-bottom: 15px
     a
       +tr(color .3s)
       +hover

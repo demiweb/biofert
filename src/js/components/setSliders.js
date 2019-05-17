@@ -32,7 +32,27 @@ export default function setSliders() {
         dots: false,
         prevArrow: false,
         nextArrow: false,
-        autoplay: true
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       }
     };
 

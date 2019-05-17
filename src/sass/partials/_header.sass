@@ -1,12 +1,38 @@
 .header
+  $this: &
+  position: relative
+  z-index: 10
+  &.has-open-menu
+    #{$this}__bottom
+      position: relative
+      transform: translate(0, 0)
+      z-index: 1
+    #{$this}__contacts
+      z-index: 10
+      transform: translate(0, 0)
   &__top
     background-color: $white
-    height: $hd-top
+    #{$this}__inner
+      height: $hd-top
+      +md
+        height: $hd-top-mob
   &__bottom
     background-color: $accent
-    padding-top: 8px
-    padding-bottom: 8px
-    height: $hd-bottom
+    // +tr(transform .3s)
+    +md
+      position: absolute
+      transform: translate(0, -100%)
+      z-index: -1
+      width: 100%
+      #{$this}__inner
+        height: auto
+        display: block
+        text-align: center
+    #{$this}__inner
+      height: $hd-bottom
+      padding-top: 8px
+      padding-bottom: 8px
+    
   &__inner
     +flex(space-between, center)
   &__title
@@ -14,10 +40,77 @@
     text-transform: uppercase
     color: $white
     +reg
+    +md
+      margin-bottom: 10px
   &__btns
     +flex()
     .social
       margin-left: 40px
+    +md
+      justify-content: center
+    +xs
+      display: block
+      .social
+        margin-left: 0
+      .download
+        margin-bottom: 8px
+  &__nav
+    +lg
+      position: absolute
+      top: 100%
+      width: 100%
+      left: 0
+      // height: calc(100vh - #{$hd-top} - #{$hd-bottom})
+      height: 100vh
+      overflow: auto
+      background-color: rgba($black, .6)
+      z-index: 10
+      visibility: hidden
+      opacity: 0
+      +tr(visibility .3s, opacity .3s)      
+      &.is-active
+        visibility: visible
+        opacity: 1
+        .nav
+          transform: translate(0, 0)
+      .nav
+        background-color: $white
+        +tr(transform .3s)
+        transform: translate(0, -100%)
+    +md
+      // height: calc(100vh - #{$hd-top-mob})
+
+  &__logo
+    +lg
+      flex-grow: 1
+  &__contacts
+    +lg
+      margin-left: 10px
+      .contact
+        display: inline-block
+        +notlast
+          margin-right: 5px
+    +md
+      // display: none
+      position: absolute
+      width: 100%
+      top: 100%
+      left: 0
+      z-index: -1
+      margin-left: 0
+      text-align: center
+      padding-left: 10px
+      padding-right: 10px
+      padding-top: 10px
+      transform: translate(0, -100%)
+      +tr(opacity .3s, visibility .3s, transform .3s)
+      .contact
+        display: block
+  &__burger
+    display: none
+    +lg
+      display: block
+      margin-left: 15px
 
 .contacts
 
@@ -25,24 +118,68 @@
   +bold
   color: $black
   display: block
+  +hover
+    text-decoration: underline
 
 .logo
   display: block
 
 .lang
   color: $accent
+  ul
+    position: relative
+    +before
+      +icon-arrow(6, 6, 1, currentColor, -45)
+      display: inline-block
+      position: absolute
+      top: 8px
+      right: 0
+    &:hover
+      li
+        &:last-child
+          display: block
   a
     text-transform: uppercase
     color: $accent
     font-size: 16px
     +reg
+    +hover
+      text-decoration: underline
   li
     position: relative
     padding-right: 15px
-    +before
-      +icon-arrow(6, 6, 1, currentColor, -45)
-      display: inline-block
+    &:last-child
       position: absolute
-      top: 50%
-      right: 0
-      transform: translate(0, -50%) rotate(-45deg)
+      top: 100%
+      left: 0
+      display: none
+    
+
+.burger
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 12px
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span 
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $accent
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.is-active span 
+    background-color: transparent
+  &.is-active span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.is-active span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
