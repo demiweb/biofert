@@ -26,6 +26,13 @@ export default function setSliders() {
         prevArrow: false,
         nextArrow: false,
         autoplay: true
+      },
+      partners: {
+        slidesToShow: 4,
+        dots: false,
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true
       }
     };
 

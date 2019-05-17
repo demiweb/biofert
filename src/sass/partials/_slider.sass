@@ -119,6 +119,15 @@
                 +after
                   height: calc(100% + 14px)
                   background-color: $accent
-
-
-
+  &--partners
+    .slide
+      height: 80px
+      &__img
+        +flex(center, center)
+        height: 100%
+        +hover
+          img
+            filter: grayscale(0)
+        img
+          filter: grayscale(100%)
+          +tr(filter .3s)

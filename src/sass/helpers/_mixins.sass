@@ -228,3 +228,46 @@
   display: inline-flex
   justify-content: $justify-content
   align-items: $align-items
+
+=link-arrow($color: inherit, $color-hover: $color, $arrow-width: 60, $active-width: 80)
+  $this: &
+  color: $color
+  font-size: 16px
+  +inline-flex(flex-start, center)
+  +reg
+  +tr(color .3s)
+  +hover
+    #{$this}__arrow
+      width: $active-width + px
+      color: $color-hover
+  &__title
+    display: block
+    margin-right: 10px
+  &__arrow
+    position: relative
+    width: $arrow-width + px
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    display: block
+    transition: transform .3s, width .3s
+    &::before
+      width: 100%
+      content: ''
+      position: absolute
+      height: 1px
+      background-color: currentColor
+      top: 50%
+      right: -1px
+      transform: translate(0, -50%)
+      transition: width .3s
+    &::after
+      display: inline-block
+      position: absolute
+      +icon-arrow(8, 8, 1, currentColor, 225)
+      content: ''
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg) !important
+      right: 0
+
+// example +link-arrow($c-text, $accent, 30, 50)

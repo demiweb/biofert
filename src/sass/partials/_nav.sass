@@ -16,6 +16,19 @@
       // +semi
       background-color: #eaf0ef
 
+  &--footer
+    li
+      display: block
+      +notlast
+        margin-bottom: 20px
+    a
+      padding: 0
+      color: $green-light
+      +hover
+        background-color: transparent
+        text-decoration: underline
+        color: $green
+
 .types-nav
   +flex()
   &__link

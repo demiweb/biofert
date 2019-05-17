@@ -1,0 +1,87 @@
+{%set
+news = [
+  {
+    img: 'richard-nolan-178668-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер 2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  },
+  {
+    img: 'american-public-power-association-423204-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  },
+  {
+    img: 'agence-producteurs-locaux-damien-kuhn-97729-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер.'
+  },
+  {
+    img: 'viktor-kiryanov-111736-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--gray section--img">
+  <div class="container">
+    <div class="section__title section__title-md">
+      <h2 class="h2">Компания Biofert всегда следит за последними новостями в индустрии минеральных удобрений</h2>
+    </div>
+
+    <div class="row">
+      {% for i in news %}
+      <div class="col-6">
+        <!-- begin news-item -->
+        <a href="#" class="news-item">
+          <span class="news-item__top js-lazy" data-background-image="img/news/{{ i.img }}">
+            <span class="news-item__block">
+              <span class="news-item__title">
+                <h4 class="h4 h4--white">{{ i.title }}</h4>
+              </span>
+
+              <span class="news-item__text text text--white js-truncate-text">{{ i.text }}</span>
+            </span>
+          </span>
+
+          <span class="news-item__bottom">
+            <span class="link-arrow">
+              <span class="link-arrow__title">Читать дальше</span>
+              <span class="link-arrow__arrow"></span>
+            </span>
+
+            <span class="news-item__meta">
+              <span class="meta-item">
+                {{ mixins.icon('view') }}
+                <span class="meta-item__title">344</span>
+              </span>
+
+              <span class="meta-item">
+                {{ mixins.icon('time') }}
+                <span class="meta-item__title">05 Май 2016</span>
+              </span>
+            </span>
+          </span>
+        </a>
+        <!-- end news-item -->
+      </div>
+      {% endfor %}
+
+      <div class="col-12">
+        <div class="section__btn">
+          {{ mixins.btn(
+            title = 'Читать все новости',
+            mod = ''
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-img section-img--left">
+    <img data-src="img/cultures/wheat-lg.png" alt="" class="js-lazy">
+  </div>
+  
+</section>
+<!-- end section -->

@@ -1,0 +1,38 @@
+.news-item
+  $this: &
+  height: calc(100% - 25px)
+  // box-shadow: 0px 4px 17.6px 4.4px rgba(0, 0, 0, 0.11)
+  margin-bottom: 25px
+  display: block
+  +hover
+    #{$this}__bottom
+      background-color: $black
+      .link-arrow
+        color: $white
+  &__top
+    +cover
+    +flex(flex-end, normal, column)
+    padding-left: 40px
+    padding-right: 40px
+    padding-bottom: 40px
+    padding-top: 25%
+    height: calc(100% - 85px)
+  &__title
+    margin-bottom: 10px
+  &__bottom
+    height: 85px
+    padding-left: 40px
+    padding-right: 40px
+    +flex(space-between, center)
+    background-color: $white
+    box-shadow: 0px 4px 17.6px 4.4px rgba(0, 0, 0, 0.11)
+    +tr(background-color .3s)
+  &__meta
+    .meta-item
+      +notlast
+        margin-right: 25px
+  &__block
+    max-width: 360px
+  &__text
+    display: block
+    max-height: 80px

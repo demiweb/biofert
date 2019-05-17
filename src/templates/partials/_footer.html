@@ -1,0 +1,103 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="footer__logo">
+          <a href="/" class="logo"><img src="img/logo-white.png" alt=""></a>
+        </div>
+
+        <div class="footer__social">
+          {{ mixins.list(
+            name = 'social',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { item: '', link: mixins.icon('twitter'), modItem: '', modLink: '' },
+              { item: '', link: mixins.icon('facebook'), modItem: '', modLink: '' },
+              { item: '', link: mixins.icon('instagram'), modItem: '', modLink: '' }
+            ]
+          ) }}
+        </div>
+
+        <div class="footer__text-sm">
+          <p>2014 - 2019  &copy;Biofert Все права защищены</p>
+          <p>Разработка сайтов: «Demiweb International»</p>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Основное</h4>
+        </div>
+
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Главная' },
+              { link: 'Продукция' },
+              { link: 'Системы питания' },
+              { link: 'О нас' },
+              { link: 'Партнеры' },
+              { link: 'Новости' },
+              { link: 'Контакты' }
+            ]
+          ) }}
+      </div>
+        
+      <div class="col-2">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Партнеры</h4>
+        </div>
+
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Biofert' },
+              { link: 'Lebosol' },
+              { link: 'ADOB' },
+              { link: 'Alwernia' },
+              { link: 'Украина' },
+              { link: 'Еще' }
+            ]
+          ) }}
+      </div>
+
+      <div class="col-3">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Контакты</h4>
+        </div>
+
+          <div class="footer__text">
+            <p>ТОВ «Біоферт»<br>
+              47722, Тернопільська обл. <br>
+              Тернопільський р-н. <br>
+            с.Великі Гаї, вул. Підлісна 27 </p>
+            <p>Тел./Факс: <a href="tel:+380352225512">+38(0352)22-55-12</a><br>
+              вул. Чорноморська, 1, офіс 304<br>
+              04080, м. Київ<br>
+              Тел./Факс: <a href="tel:+380443791327">+38(044) 379-13-27</a><br>
+            <a href="mailto:fertilizer@biofert.com.ua">fertilizer@biofert.com.ua</a></p>
+          </div>
+      </div>
+
+      <div class="col-2">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Помощь</h4>
+        </div>
+
+        {{ mixins.list(
+          name = 'nav',
+          modifications = { wrap: 'nav--footer', item: '', link: '' },
+          list = [
+            { link: 'Перезвоните мне' },
+            { link: 'Правила' }
+          ]
+        ) }}
+      </div>
+      
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

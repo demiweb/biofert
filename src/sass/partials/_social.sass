@@ -1,12 +1,17 @@
 .social
   li
     display: inline-block
+    +notlast
+      margin-right: 10px
   a
     +flex(center, center)
     border-radius: 50%
     height: 32px
     width: 32px
     background-color: $accent
+    +tr(background-color .3s)
+    +hover
+      background-color: transparent
     .icon
       fill: $white
 
