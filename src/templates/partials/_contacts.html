@@ -1,0 +1,86 @@
+{%set
+contacts = [
+  { tab: 'main_office', active: true },
+  { tab: 'kiev_office' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--no-pad section--contacts">
+  <div class="section-img section-img--contacts js-lazy" data-background-image="img/contacts/IPHONE X.png"></div>
+  <div class="section-img section-img--left-bottom  js-lazy" data-background-image="img/side-imgs/LEAFT.png"></div>
+  <div class="section-img section-img--right-center js-lazy" data-background-image="img/contacts/DESK LAMP.png"></div>
+
+  <div class="section--contacts__top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6"></div>
+
+        <div class="col-xl-5 col-lg-6">
+          <!-- begin contacts-tabs -->
+          <div class="contacts-tabs js-tabs">
+            <div class="contacts-tabs__tabs">
+              <a href="#" class="contacts-tabs__tab js-tab is-active" data-target-tab="main_office">Главный офис</a>
+              <a href="" class="contacts-tabs__tab js-tab" data-target-tab="kiev_office">ПРЕДСТАВИТЕЛЬСТВО В КИЕВЕ</a>
+            </div>
+
+            <div class="contacts-tabs__content">
+              {% for i in contacts %}              
+              <div class="contacts-tabs__item contacts-item js-tabs-item{% if i.active %} is-active{% endif %}" data-tab="{{ i.tab }}">
+                <div class="contacts-item__social">
+                  {{ mixins.list(
+                    name = 'social',
+                    modifications = { wrap: '', item: '', link: '' },
+                    list = [
+                      { item: '', link: mixins.icon('twitter'), modItem: '', modLink: '' },
+                      { item: '', link: mixins.icon('facebook'), modItem: '', modLink: '' },
+                      { item: '', link: mixins.icon('instagram'), modItem: '', modLink: '' }
+                    ]
+                  ) }}
+                </div>
+
+                <div class="contacts-item__text text">У вас появились вопросы? Есть предложение по выгодному сотрудничеству? Или просто хотите уточнить информацию? 
+                  Напишите или позвоните нам! 
+                Мы всегда рады новым знакомствам.</div>
+
+                <div class="contacts-item__list">
+                  {{ mixins.list(
+                    name = 'contacts-list',
+                    modifications = { wrap: '', item: '', link: '' },
+                    list = [
+                      { item: mixins.icon('building') + 'ТОВ «Біоферт»', link: '' },
+                      { item: mixins.icon('location') + '47722, Тернопільська обл.
+    Тернопільський р-н. с.Великі Гаї, вул. Підлісна 27 ', link: '', modItem: '', modLink: '' },
+                      { item: mixins.icon('call'), link: '+38(0352)22-55-12', href: 'tel:+38(0352)225512' },
+                      { item: mixins.icon('envelope'), link: 'np@biofert.com.ua', href: 'mailto:np@biofert.com.ua' }
+                    ]
+                  ) }}
+                </div>
+
+                <div class="contacts-item__btns text-block__btns">
+                  <div class="contacts-item__btn text-block__btn">
+                    {{ mixins.btn(
+                      title = 'Заказать звонок',
+                      mod = 'btn--accent btn--md'
+                    ) }}
+                  </div>
+                  <div class="contacts-item__btn text-block__btn">
+                    {{ mixins.btn(
+                      title = 'Скачать прайс-лист',
+                      mod = 'btn--md'
+                    ) }}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <!-- end contacts-tabs -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- end section -->

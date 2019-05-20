@@ -2,3 +2,4 @@ ProjectTitle: template
 
 PageList:
 - file: main.html
+- file: contacts.html

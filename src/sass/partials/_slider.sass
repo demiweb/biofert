@@ -78,15 +78,16 @@
 
 
   &--banner
-    .slide
+    background-color: $c-text
+    .slide      
       &__img
         display: block
         +cover
-        height: calc(100vh - #{$hd-top} - #{$hd-bottom})
+        // height: calc(100vh - #{$hd-top} - #{$hd-bottom})
         width: 100%
         background-color: $c-text
         +md
-          height: calc(100vh - #{$hd-top-mob})
+          // height: calc(100vh - #{$hd-top-mob})
     &__wrap
       .slider
         &__dots

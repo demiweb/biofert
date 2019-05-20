@@ -1,10 +1,7 @@
 .section
-  padding-top: 30px
-  padding-bottom: 30px
+  padding-top: var(--section-padding)
+  padding-bottom: var(--section-padding)
   position: relative
-  +md
-    padding-top: 20px
-    padding-bottom: 20px
   &__title
     margin-bottom: 25px
     text-align: center
@@ -24,16 +21,32 @@
     background-color: $gray-light
   &--gray
     background-color: $gray
+  &--no-pad
+    padding: 0
   &--img
     .container
       position: relative
       z-index: 1
+  &--contacts
+    padding-bottom: 12%
+    background-image: radial-gradient(circle, rgba(#fafafa,1) 0%, rgba(#e4e4e4,1) 100%)
+    overflow: hidden
+    +r(1760)
+      padding-bottom: 10%
+    +r(1560)
+      padding-bottom: 5%
+    +lg
+      padding-bottom: 0
+    &__top
+      background-image: radial-gradient(circle, rgba(#efefef,1) 0%, rgba(#dddddd,1) 100%)
 
 .section-img
   position: absolute
   width: 350px
   height: 300px
   z-index: 0
+  background-repeat: no-repeat
+  background-size: contain
 
   &--right
     right: 0
@@ -43,3 +56,36 @@
     left: 0
     bottom: 0
     +flex(flex-start, flex-end)
+  &--contacts
+    width: percentage(800/1920)
+    height: auto
+    padding-top: 40%
+    background-size: contain
+    top: 50px
+    left: 0
+    +md
+      display: none
+  &--right-center
+    bottom: 7%
+    right: 0
+    z-index: 0
+    background-size: contain
+    background-position: 100% 50%
+    height: auto
+    padding-top: 30%
+    width: 24%
+    +r(1760)
+      width: 20%
+    +r(1560)
+      width: 15%
+    +lg
+      display: none
+  &--left-bottom
+    left: 0
+    bottom: 0
+    z-index: 1
+    width: 25%
+    height: auto
+    padding-top: 18%
+    +md
+      display: none

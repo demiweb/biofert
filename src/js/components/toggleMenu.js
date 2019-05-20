@@ -3,7 +3,7 @@ import { $DOC, $WIN, $BODY, ACTIVE, NOSCROLL } from '../constants';
 
 class Menu {
   constructor() {
-    this.$menu = $(`.${Menu.classNames.menu}`);   
+    this.$menu = $(`.${Menu.classNames.menu}`);
   };
 
   init() {

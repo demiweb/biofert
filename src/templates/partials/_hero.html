@@ -1,3 +1,4 @@
+{% if hero.banner %}
 <!-- begin hero -->
 <section class="hero">
   <!-- begin slider -->
@@ -5,7 +6,8 @@
     <div class="slider slider--banner js-slider" data-slider="banner">
       {% for i in range(0, 5) %}
       <a href="#" class="slide">
-        <span class="slide__img js-lazy" data-background-image="img/banner.jpg"></span>
+        {# <span class="slide__img js-lazy" data-background-image="img/banner.jpg"></span> #}
+        <img data-src="img/banner.jpg" alt="" class="js-lazy">
       </a>
       {% endfor %}
     </div>
@@ -21,3 +23,29 @@
   
 </section>
 <!-- end hero -->
+
+{% elseif hero.simple %}
+
+<!-- begin hero -->
+<section class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}">
+ <div class="container">
+    {% if hero.breadcrumbs %}
+  <div class="hero__breadcrumbs">
+    {{ mixins.list(
+      name = 'breadcrumbs',
+      modifications = { wrap: '', item: '', link: '' },
+      list = hero.breadcrumbs
+    ) }}
+  </div>
+  {% endif %}
+
+  {% if hero.title %}
+  <div class="hero__title">
+    <h2 class="h2">{{ hero.title }}</h2>
+  </div>
+  {% endif %}
+ </div>  
+</section>
+<!-- end hero -->
+
+{% endif %}

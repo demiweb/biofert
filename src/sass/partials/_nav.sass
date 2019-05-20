@@ -10,7 +10,7 @@
       text-align: center
   a
     display: block
-    font-size: 16px
+    font-size: var(--fz)
     +reg
     color: $accent
     +tr(color .3s, background-color .3s)
@@ -54,7 +54,7 @@
     width: 25%
     display: block
     +bold
-    font-size: 16px
+    font-size: var(--fz)
     color: $white
     +hover
       font-size: 21px
@@ -65,6 +65,7 @@
       background-color: rgba($accent, .7)
       +coverdiv
       z-index: 0
+      +tr(visibility .3s, opacity .3s)
     +lg
       padding-top: 5%
     +md

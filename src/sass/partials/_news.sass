@@ -8,6 +8,10 @@
       background-color: $black
       .link-arrow
         color: $white
+    #{$this}__top
+      +before
+        visibility: hidden
+        opacity: 0
   &__top
     +cover
     background-color: $gray
@@ -17,6 +21,12 @@
     padding-bottom: 40px
     padding-top: 25%
     height: calc(100% - 85px)
+    position: relative
+    +before
+      +coverdiv
+      background-color: rgba($black, .5)
+      z-index: 0
+      +tr(opacity .3s, visibility .3s)
     +sm
       padding-left: 20px
       padding-right: 20px
@@ -57,6 +67,8 @@
         margin-right: 25px
   &__block
     max-width: 360px
+    position: relative
+    z-index: 1
   &__text
     display: block
     max-height: 80px

@@ -9,46 +9,16 @@
 =semi
   font-family: 'opensans-semibold', Arial, sans-serif
 
-=lg
-  +r(1199)
-    @content
-=md
-  +r(991)
-    @content
-=sm
-  +r(767)
-    @content
-=xs
-  +r(575)
-    @content
-=xss
-  +r(479)
-    @content
-
-=lgmin
-  +r(1200)
-    @content
-=mdmin
-  +r(992)
-    @content
-=smmin
-  +r(768)
-    @content
-=xsmin
-  +r(576)
-    @content
-
-
 body
   background: #FFF
   line-height: 1.4
-  font-size: 16px
+  font-size: var(--fz)
   +reg
   color: $c-text
   +no-scroll
 
 .out
-  overflow-x: hidden
+  overflow: hidden
 
 img
   max-width: 100%
@@ -65,7 +35,7 @@ img
   background-color: transparent
   color: $accent
   +reg
-  font-size: 16px
+  font-size: var(--fz)
   +tr(color .3s, background-color .3s)
   +hover
     background-color: $accent
@@ -75,8 +45,18 @@ img
     padding: 10px
   +sm
     padding: 8px
-    font-size: 14px
     min-width: 200px
+
+  &--md
+    min-width: 220px
+  &--accent
+    background-color: $accent
+    color: $white
+    +bold
+    +hover
+      background-color: transparent
+      +reg
+      color: $accent
 
 .btn-link
   color: #595959
@@ -89,13 +69,13 @@ img
     color: $accent
   .icon
     fill: currentColor
-    font-size: 16px
+    font-size: var(--fz)
     margin-right: 5px
     +tr(fill .3s)
 
 .download
   color: $white
-  font-size: 16px
+  font-size: var(--fz)
   +reg
   +inline-flex(flex-start, center)
   text-decoration: underline
@@ -130,7 +110,7 @@ img
         margin-right: 5px
 
 .link-arrow
-  +link-arrow(#383838, $white)
+  +link-arrow(var(--fz), #383838, $white)
 
 .meta-item
   color: #adadad
