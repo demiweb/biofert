@@ -1,9 +1,6 @@
 ---
-title: Index page
-page: main
-hero: {
-  banner: true
-}
+title: news
+page: news
 news: [
   {
     img: 'richard-nolan-178668-unsplash.jpg',
@@ -26,17 +23,14 @@ news: [
     text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
   }
 ]
+newsPagination: true
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
   {% include "partials/_header.html" %}
-  {% include "partials/_hero.html" %}
-  {% include "partials/_about.html" %}
-  {% include "partials/_types-nav.html" %}
-  {% include "partials/_s-cultures.html" %}
-  {% include "partials/_s-news.html" %}
-  {% include "partials/_partners.html" %}
+  {% include "partials/_p-news.html" %} 
+  
   {% include "partials/_footer.html" %}
 {% endblock %}
 

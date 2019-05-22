@@ -4,3 +4,4 @@ PageList:
 - file: main.html
 - file: contacts.html
 - file: cultures.html
+- file: news.html

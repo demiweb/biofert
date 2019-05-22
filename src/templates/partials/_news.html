@@ -1,0 +1,70 @@
+<!-- begin news -->
+<div class="news">
+  <div class="row">
+    {% for i in news %}
+    <div class="col-lg-6">
+      <!-- begin news-item -->
+      <a href="#" class="news-item">
+        <span class="news-item__top js-lazy" data-background-image="img/news/{{ i.img }}">
+          <span class="news-item__block">
+            <span class="news-item__title">
+              <h4 class="h4 h4--white">{{ i.title }}</h4>
+            </span>
+
+            <span class="news-item__text text text--white js-truncate-text">{{ i.text }}</span>
+          </span>
+        </span>
+
+        <span class="news-item__bottom">
+          <span class="link-arrow">
+            <span class="link-arrow__title">Читать дальше</span>
+            <span class="link-arrow__arrow"></span>
+          </span>
+
+          <span class="news-item__meta">
+            <span class="meta-item">
+              {{ mixins.icon('view') }}
+              <span class="meta-item__title">344</span>
+            </span>
+
+            <span class="meta-item">
+              {{ mixins.icon('time') }}
+              <span class="meta-item__title">05 Май 2016</span>
+            </span>
+          </span>
+        </span>
+      </a>
+      <!-- end news-item -->
+    </div>
+    {% endfor %}
+
+    <div class="col-12">
+      {% if newsPagination %}
+      <div class="section__pagination">
+        {{ mixins.list(
+          name = 'pagination',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { item: '', link: ' ', modItem: '', modLink: 'prev' },
+            { item: '', link: '1', modItem: '', modLink: 'is-active' },
+            { item: '', link: '2', modItem: '', modLink: '' },
+            { item: '', link: '3', modItem: '', modLink: '' },
+            { item: '', link: '...', modItem: '', modLink: 'is-inactive' },
+            { item: '', link: '15', modItem: '', modLink: '' },
+            { item: '', link: ' ', modItem: '', modLink: 'next' }
+          ]
+        ) }}
+      </div>
+
+      {% else %}
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = 'Читать все новости',
+          mod = ''
+          ) }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<!-- end news -->

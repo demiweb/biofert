@@ -1,0 +1,26 @@
+<!-- begin section -->
+<section class="section section--img">
+  <div class="section-img section-img--right js-lazy" data-background-image="img/side-imgs/newspaper.png"></div>
+  <div class="section-img section-img--left js-lazy" data-background-image="img/side-imgs/apple.png"></div>
+
+  <div class="container">
+    <div class="main__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { item: '', link: 'Главная' },
+          { item: '/' },
+          { item: '', link: 'Новости', modItem: '', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="section__title section__title-left">
+      <h2 class="h2">Новости</h2>
+    </div>
+
+    {% include "partials/_news.html" %}
+  </div>
+</section>
+<!-- end section -->

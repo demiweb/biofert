@@ -1,0 +1,67 @@
+.pagination
+  --arrow-width: 60px
+  +xs
+    --arrow-width: 30px
+  font-size: 0
+  .next, .prev    
+    @extend .link-arrow__arrow
+    width: var(--arrow-width)
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    border: 0
+    min-width: 0
+    right: auto
+    +before
+      right: auto
+      left: 0
+    +after
+      +tr(left .3s)
+      right: auto
+      left: calc(var(--arrow-width) - 8px)
+
+    +hover
+      --arrow-width: calc(var(--arrow-wdth) + 20px)
+      background-color: transparent
+      color: $accent
+      +before        
+  .prev
+    transform: translate(0, -50%) rotate(180deg)
+    left: auto
+    right: 0
+  ul
+    
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+    margin-left: 5px
+    font-size: 13px
+    position: relative
+  a, span
+    display: block
+    border-radius: 35px
+    color: $accent
+    background-color: transparent
+    border: 1px solid $accent
+    text-align: center
+    padding: 7px
+    height: 35px
+    min-width: 35px
+    +tr(color .3s, background-color .3s)
+    +hover
+      background-color: $accent
+      color: $white
+    &.is-active
+      background-color: $accent
+      color: $white
+      pointer-events: none
+    &.is-inactive
+      pointer-events: none
+      border: 0
+      background-color: transparent
+      padding-left: 0
+      padding-right: 0
+      min-width: 0
+      +inline-flex(flex-start, flex-end)
