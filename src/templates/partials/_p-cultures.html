@@ -1,0 +1,68 @@
+<!-- begin main -->
+<main class="main">
+  <div class="container">
+    <div class="main__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'Главная' },
+          { item: '/' },
+          { link: 'Системы питания', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="section__title section__title-left">
+      <h2 class="h2">Системы питания</h2>
+    </div>
+  </div>
+
+  <!-- begin section -->
+  <section class="section section--no-pad section--img">
+    <div class="section-img section-img--right js-lazy" data-background-image="img/side-imgs/wheat-2.png"></div>
+    <div class="container">
+      {% include "partials/_cultures.html" %}
+    </div>    
+  </section>
+  <!-- end section -->
+
+  <!-- begin section -->
+  <section class="section section--no-pad section--img">
+    <div class="section-img section-img--left-center js-lazy" data-background-image="img/side-imgs/Vegetables.png"></div>
+    <div class="section-img section-img--right-bottom js-lazy" data-background-image="img/side-imgs/Leaves.png"></div>
+
+    <div class="container">
+      <div class="section__title">
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <h2 class="h2">Компания Biofert всегда следит за последними новостями в индустрии минеральных удобрений</h2>
+          </div>
+          <div class="col-lg-1"></div>
+        </div>      
+      </div>
+
+      <!-- begin text-block -->
+      <div class="text-block text">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-8">
+            <p>ООО "Биоферт" - официальный дистрибьютор и партнер ведущих Европейских производителей минеральных удобрений. На сегодняшний день ООО «Биоферт» - современная, молодая компания, которая динамично развивается и активно завоевывает Украинский и Европейский рынки. Цель нашей компании - обеспечение аграриев качественными и эффективными элементами питания по умеренной цене. Мы используем индивидуальный поход к каждому из наших клиентов и предоставляем исчерпывающую информацию по использованию нашей продукции.</p>
+            <p>На сегодняшний день ООО «Биоферт» - современная, молодая компания, которая динамично развивается и активно завоевывает Украинский и Европейский рынки. Цель нашей компании - обеспечение аграриев качественными и эффективными элементами питания по умеренной цене. Мы используем индивидуальный поход к каждому из наших клиентов и предоставляем исчерпывающую информацию по использованию нашей продукции.</p>
+          </div>
+
+          <div class="col-lg-6 col-md-4 is-center">
+            <img data-src="img/Broccoli.png" alt="" class="js-lazy">
+          </div>
+
+          <div class="col-12">
+            <p>На сегодняшний день ООО «Биоферт» - современная, молодая компания, которая динамично развивается и активно завоевывает Украинский и Европейский рынки. Цель нашей компании - обеспечение аграриев качественными и эффективными элементами питания по умеренной цене. Мы используем индивидуальный поход к каждому из наших клиентов и предоставляем исчерпывающую информацию по использованию нашей продукции.ООО "Биоферт" - официальный дистрибьютор и партнер ведущих Европейских производителей минеральных удобрений. На сегодняшний день ООО «Биоферт» - современная, молодая компания, которая динамично развивается и активно завоевывает Украинский и Европейский рынки. </p>
+          </div>
+        </div>
+      </div>
+      <!-- end text-block -->
+    </div>
+  </section>
+  <!-- end section -->
+</main>
+<!-- end main -->

@@ -54,6 +54,7 @@
     right: 0
     bottom: 65px
     text-align: right
+    background-position: 100% 50%
   &--left
     left: 0
     bottom: 0
@@ -82,6 +83,12 @@
       width: 15%
     +lg
       display: none
+  &--right-bottom
+    bottom: calc(0px - var(--section-padding))
+    right: 0
+    background-position: 100% 50%
+    +md
+      display: none
   &--left-bottom
     left: 0
     bottom: 0
@@ -90,4 +97,10 @@
     height: auto
     padding-top: 18%
     +md
+      display: none
+  &--left-center
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    +lg
       display: none
