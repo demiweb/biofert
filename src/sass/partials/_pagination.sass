@@ -1,9 +1,10 @@
 .pagination
-  --arrow-width: 60px
-  +xs
-    --arrow-width: 30px
+  
   font-size: 0
-  .next, .prev    
+  .next, .prev
+    --arrow-width: 60px
+    +xs
+      --arrow-width: 30px
     @extend .link-arrow__arrow
     width: var(--arrow-width)
     position: absolute
@@ -22,10 +23,13 @@
       left: calc(var(--arrow-width) - 8px)
 
     +hover
-      --arrow-width: calc(var(--arrow-wdth) + 20px)
+      // --arrow-width: calc(var(--arrow-width) + 20px)
       background-color: transparent
       color: $accent
-      +before        
+      +before
+        width: calc(var(--arrow-width) + 20px)
+      +after
+        left: calc(var(--arrow-width) + 12px)    
   .prev
     transform: translate(0, -50%) rotate(180deg)
     left: auto
