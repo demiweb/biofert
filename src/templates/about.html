@@ -1,0 +1,32 @@
+---
+title: about
+page: about
+hero: {
+  simple: true,
+  title: 'О нас',
+  mod: 'hero--simple',
+  breadcrumbs: [
+    { link: 'Главная' },
+    { item: '/' },
+    { link: 'О нас', modLink: 'is-active' }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_s-about.html" %}
+  {% include "partials/_features.html" %}
+
+  {% set sectionGray = true %}
+  {% include "partials/_partners.html" %}
+
+  {% include "partials/_fetures-scnd.html" %}
+  
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+

@@ -1,0 +1,29 @@
+.features
+
+.feature
+  $this: &
+  background-color: $green-lighten
+  +flex(center, center, column)
+  text-align: center
+  // height: 100%
+  padding: 70px 25px
+  color: $accent
+  +md
+    margin-bottom: 15px
+  &__title
+    +css-lock(40, 70, 576, 1199, font-size)
+    +bold
+  &__text
+  &__icon
+    fill: currentColor
+    font-size: 45px
+
+  &--icon
+    background-color: transparent
+    padding-top: 0
+    padding-bottom: 0
+    #{$this}__title
+      @extend .h4
+      color: $accent
+    #{$this}__text
+      margin-bottom: 8px

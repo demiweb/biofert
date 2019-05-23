@@ -34,8 +34,41 @@ h1, h2, h3, h4, h5, h6
     color: $white
 
 .text-block
-  background-color: $white
+  --margin-bottom: 35px
+  +clr
+  +md
+    --margin-bottom: 25px
+  a:not([class*='btn'])
+    color: $accent
+    text-decoration: underline
+  ul, ol
+    margin-bottom: var(--margin-bottom)
+  ul
+    list-style-type: disc
+    padding-left: 20px
+  ol
+    list-style-type: decimal
+    padding-left: 20px
   p
-    margin-bottom: 35px
-    +md
-      margin-bottom: 25px
+    margin-bottom: var(--margin-bottom)
+  img
+    margin-bottom: 10px
+    margin-top: 10px
+    &.is-right
+      float: right
+      margin-left: 15px
+      +md
+        max-width: 40%
+      +xs
+        float: none
+        width: 100%
+        max-width: 100%
+    &.is-left
+      float: left
+      margin-right: 15px
+      +md
+        max-width: 40%
+      +xs
+        float: none
+        width: 100%
+        max-width: 100%

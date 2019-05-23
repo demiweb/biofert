@@ -1,0 +1,45 @@
+{%set
+features = [
+  { title: '100+', text: 'Клиентов по всей Украине, которые нам доверились' },
+  { title: '25', text: 'Клиентов по всей Украине, которые нам доверились' },
+  { title: '700+', text: 'Клиентов по всей Украине, которые нам доверились' },
+  { title: '35+', text: 'Клиентов по всей Украине, которые нам доверились' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+        <div class="section__title">
+          <h2 class="h2">Наша компания - единственная в Украине предлагает
+          сертифицированные товары по всем правилам ООО</h2>
+          <div class="text block-col-8 text--center">Мы используем индивидуальный поход к каждому из наших клиентов и предоставляем исчерпывающую информацию по использованию нашей продукции</div>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+
+    <!-- begin features -->
+    <div class="features">
+      <div class="row">
+        {% for i in features %}
+        <div class="col-lg-3 col-md-6">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__title">{{ i.title }}</div>
+
+            <div class="feature__text">{{ i.text }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+  
+</section>
+<!-- end section -->

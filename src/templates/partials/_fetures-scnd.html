@@ -1,0 +1,55 @@
+{%set
+features = [
+  { icon: 'social-care', title: 'Лояльность', text: 'К каждому клиенту мы подходим индивидуально' },
+  { icon: 'running-man', title: 'Скорость', text: 'К каждому клиенту мы подходим индивидуально' },
+  { icon: 'quality', title: 'Качество', text: 'К каждому клиенту мы подходим индивидуально' },
+  { icon: 'hand', title: 'Цена', text: 'К каждому клиенту мы подходим индивидуально' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--no-pad-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+        <div class="section__title">
+          <h2 class="h2">Наша компания - единственная в Украине предлагает
+          сертифицированные товары по всем правилам ООО</h2>
+          <div class="text block-col-8 text--center">Мы используем индивидуальный поход к каждому из наших клиентов и предоставляем исчерпывающую информацию по использованию нашей продукции</div>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+  </div>
+
+  <div class="section__gray-block">
+    <div class="container">
+      <!-- begin features -->
+      <div class="features">
+        <div class="row">
+          {% for i in features %}
+          <div class="col-lg-3 col-md-6">
+            <!-- begin feature -->
+            <div class="feature feature--icon">
+              <div class="feature__icon">{{ mixins.icon(i.icon) }}</div>
+
+              <div class="feature__title">{{ i.title }}</div>
+
+              <div class="feature__text">{{ i.text }}</div>
+
+              <div class="feature__img">
+                <img data-src="img/leaves.png" alt="" class="js-lazy">
+              </div>
+            </div>
+            <!-- end feature -->
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- end features -->
+    </div>
+  </div>
+
+</section>
+<!-- end section -->
