@@ -1,0 +1,48 @@
+{%set
+types = [
+  { img: '1.jpg', title: 'Грунтовые' },
+  { img: '2.jpg', title: 'Внекорневые' },
+  { img: '3.jpg', title: 'Специальные' },
+  { img: '4.jpg', title: 'Органические' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'Главная' },
+          { item: '/' },
+          { link: 'Типы продукции', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="section__title section__title-left">
+      <h2 class="h2">Типы продукции</h2>
+    </div>
+
+    <!-- begin types -->
+    <div class="types">
+      <div class="row">
+        {% for i in types %}
+        <div class="col-md-6">
+          <!-- begin type -->
+          <a href="#" class="type js-lazy" data-background-image="img/types/{{ i.img }}">
+            <span class="type__title">
+              {{ i.title }}
+            </span>
+          </a>
+          <!-- end type -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end types -->
+  </div>
+</section>
+<!-- end section -->

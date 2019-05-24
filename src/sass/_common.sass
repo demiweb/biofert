@@ -127,3 +127,31 @@ img
   .icon
     fill: currentColor
     margin-right: 5px
+
+.types
+
+.type
+  position: relative
+  display: block
+  padding-top: 45%
+  margin-bottom: 30px
+  +cover
+  font-size: var(--fz)
+  color: $white
+  +bold
+  +md
+    margin-bottom: 20px
+  +hover
+    font-size: 21px
+    +before
+      visibility: hidden
+      opacity: 0
+  +before
+    background-color: rgba($accent, .7)
+    +coverdiv
+    z-index: 0
+    +tr(visibility .3s, opacity .3s)
+  &__title
+    +vcenter
+    z-index: 1
+    display: block
