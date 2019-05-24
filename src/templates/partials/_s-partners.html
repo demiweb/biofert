@@ -1,0 +1,65 @@
+{%set
+partners = [
+  {
+    logo: '2.png',
+    text: 'Компания Лебозол® уже более 20 лет специализируется на производстве жидких удобрений для внекорневого применения. За это время, продукция компании заняла лидерские позиции в своем сегменте как в Германии, так и натеритории всей Европы...'
+  },
+  {
+    logo: '5.png',
+    text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
+  },
+  {
+    logo: '4.png',
+    text: 'Компания Лебозол® уже более 20 лет специализируется на производстве жидких удобрений для внекорневого применения. За это время, продукция компании заняла лидерские позиции в своем сегменте как в Германии, так и натеритории всей Европы...'
+  },
+  {
+    logo: '3.png',
+    text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
+  },
+  {
+    logo: '1.png',
+    text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--no-pad">
+  {% for i in partners %}
+  <div class="section__block">
+    <div class="container">
+      <!-- begin partner -->
+      <div class="partner">
+        <div class="partner__img">
+          <img data-src="img/crystal-kwok-487015-unsplash (1).png" alt="" class="js-lazy">
+        </div>
+
+        <div class="partner__content">
+          <div class="partner__logo">
+            <img data-src="img/partners/{{ i.logo }}" alt="" class="js-lazy">
+          </div>
+
+          <div class="partner__text text">{{ i.text | safe }}</div>
+
+          <div class="parnter__btns text-block__btns">
+            <div class="text-block__btn">
+              {{ mixins.btn(
+                title = 'К продукции бренда',
+                mod = 'btn--accent'
+              ) }}
+            </div>
+            <div class="text-block__btn">
+              {{ mixins.btn(
+                title = mixins.icon('download') + 'Каталог PDF',
+                mod = ''
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end partner -->
+    </div>
+  </div>
+  {% endfor %}
+</section>
+<!-- end section -->

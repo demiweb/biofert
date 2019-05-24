@@ -1,0 +1,30 @@
+.partner
+  +flex(space-between, center, row, wrap)
+  +xs
+    align-items: flex-start
+  +xss
+    display: block
+  &__img
+    width: percentage(5/12)
+    +lg
+      padding-right: 15px
+    +xs
+      width: percentage(3/12)
+      padding-right: 5px
+    +xss
+      width: auto
+      padding-right: 0
+  &__content
+    width: percentage(6/12)
+    +lg
+      width: percentage(7/12)
+      padding-left: 15px
+    +xs
+      width: percentage(9/12)
+      padding-left: 5px
+    +xss
+      width: auto
+      padding-left: 0
+  &__text,
+  &__logo
+    margin-bottom: 20px

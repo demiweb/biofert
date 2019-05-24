@@ -1,0 +1,26 @@
+---
+title: partners
+page: partners
+hero: {
+  simple: true,
+  title: 'Партнеры',
+  mod: 'hero--simple',
+  breadcrumbs: [
+    { link: 'Главная' },
+    { item: '/' },
+    { link: 'Партнеры', modLink: 'is-active' }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_s-partners.html" %}
+  
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+
