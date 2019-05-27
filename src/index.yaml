@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: biofert
 
 PageList:
 - file: main.html
@@ -8,3 +8,4 @@ PageList:
 - file: about.html
 - file: partners.html
 - file: types.html
+- file: production.html

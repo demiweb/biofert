@@ -1,0 +1,152 @@
+{%set
+  production = [
+    {
+      mod: 'is-green',
+      title: '<strong>Biofert<sup>тм</sup> -</strong> уже более 20 лет<br> специализируется на производстве жидких удобрений для почвы',
+      logo: 'logo-1.png',
+      caption: true,
+      rows: [
+        {
+          mod: '',
+          img: 'bag-1.png',
+          title: 'Biofert NPK 5-10-25',
+          subttl: 'Фасовка: 1300 кг эврокуб. (1000 літрів)'
+        }
+      ]
+    },
+    {
+      mod: 'is-blue',
+      title: '<strong></strong>',
+      logo: '',
+      caption: true,
+      rows: [
+        {
+          mod: '',
+          img: 'bag-1.png',
+          title: 'Biofert NPK 5-10-25',
+          subttl: 'Фасовка: 1300 кг эврокуб. (1000 літрів)'
+        }
+      ]
+    },
+    {
+      mod: 'is-green',
+      title: '<strong></strong>',
+      logo: '',
+      caption: true,
+      rows: [
+        {
+          mod: '',
+          img: 'bag-1.png',
+          title: 'Biofert NPK 5-10-25',
+          subttl: 'Фасовка: 1300 кг эврокуб. (1000 літрів)'
+        }
+      ]
+    }    
+  ]  
+%}
+
+
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'Главная' },
+          { item: '/' },
+          { link: 'Продукцияи', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="section__title section__title-left">
+      <h2 class="h2">Продукция</h2>
+    </div>
+
+    <div class="section__types">
+      {% include "partials/_types-nav.html" %}
+    </div>
+
+    {% for i in production %}
+    <!-- begin production -->
+    <div class="production {{ i.mod }}">
+      <div class="production__top">
+        <div class="production__top-left">
+          <div class="production__top-title">
+            {{ i.title | safe }}
+          </div>
+        </div>
+
+        <div class="production__top-logo">
+          <img data-src="img/production/{{ i.logo }}" alt="" class="js-lazy">
+        </div>
+      </div>
+
+      {% if i.caption %}
+      <div class="production__caption">
+        <div class="production__caption-col">Название товара</div>
+        <div class="production__caption-col">Описание</div>
+        <div class="production__caption-col">Формула</div>
+      </div>
+      {% endif %}
+
+      {% for j in i.rows %}
+      <!-- begin production-item -->
+      <div class="production-item{% if j.mod %} {{ j.mod }}{% endif %}">
+        <div class="production-item__col">
+          <div class="production-item__img">
+            <img data-src="img/production/{{ j.img }}" alt="" class="js-lazy">
+          </div>
+
+          <div class="production-item__title">
+            <a href="#">{{ j.title }}</a>            
+          </div>
+          <div class="text">{{ j.subttl }}</div>
+        </div>
+
+        <div class="production-item__col">
+          <div class="production-item__text">Органические азотистые удобрения - Раствор 9 Побочные продукты животного происхождения из материала 3-ей категории животного происхождения...</div>
+
+          <div class="production-item__icons">
+            {{ mixins.list(
+              name = 'production-icons',
+              list = [
+                { link: mixins.icon('beet')  },
+                { link: mixins.icon('soy')  },
+                { link: mixins.icon('grapes')  },
+                { link: mixins.icon('wheat')  },
+                { link: mixins.icon('sunflower')  },
+                { link: mixins.icon('corn')  },
+                { link: mixins.icon('flower')  },
+                { link: mixins.icon('potatoes')  }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="production-item__col">
+          <div class="production-item__formula">
+            {{ mixins.list(
+              name = 'production-formula',
+              descr = true,
+              list = [
+                { dt: 'N', dd: '10.0 %' },
+                { dt: 'SO <sub>3</sub>', dd: '10.0 %' },
+                { dt: 'P<sub>2</sub>O<sub>5</sub>', dd: '40.0%' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+      <!-- end production-item -->
+      {% endfor %}
+    </div>
+    <!-- end production -->
+    {% endfor %}
+    
+  </div>
+</section>
+<!-- end section -->

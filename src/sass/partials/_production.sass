@@ -1,0 +1,93 @@
+.production
+  --padding: 20px
+  --top-color: #007d4b
+  --logo-color: #f3ffea
+  --col-width-1: 35%
+  --col-width-2: 43%
+  --col-width-3: 25%
+  $this: &
+  &.is-green
+    --top-color: #007d4b
+    --logo-color: #f3ffea
+  &__top
+    +flex()
+  &__top-logo
+    width: 220px
+    padding: var(--padding)
+    +flex(center, center)
+    background-color: var(--logo-color)
+  &__top-left
+    --rect-width: 135px
+    --rect-sm-right: 30px
+    --rect-color: #015238
+    --rect-sm-color: #026940
+    padding: var(--padding)
+    position: relative
+    flex-grow: 1
+    +flex()
+    padding-right: var(--rect-width)
+    background-color: var(--top-color)
+    +before
+      width: var(--rect-width)
+      height: 85%
+      bottom: 0
+      right: 0
+      position: absolute
+      z-index: 1
+      background-color: var(--rect-color)
+    +after
+      top: 0
+      right: var(--rect-sm-right)
+      background-color: var(--rect-sm-color)
+      width: calc(var(--rect-width) - var(--rect-sm-right))
+      position: absolute
+      height: 15%
+      z-index: 1
+  &__top-title
+    color: $white
+    text-transform: uppercase
+    strong
+      +semi
+      font-size: 30px
+      text-transform: none
+    sup
+      font-size: .5em
+      display: inline-block
+      vertical-align: top
+  &__caption
+    +flex()
+    background-color: $gray-dark
+  &__caption-col
+    padding-top: var(--padding)
+    padding-bottom: var(--padding)
+    padding-left: var(--padding)
+    +semi
+    text-transform: uppercase
+    color: $black
+    &:nth-child(1)
+      width: var(--col-width-1)
+    &:nth-child(2)
+      width: var(--col-width-2)
+    &:nth-child(3)
+      width: var(--col-width-3)
+
+.production-item
+  +flex()
+  &__col
+    padding-left: calc(var(--padding) * 1.5)
+    padding-right: calc(var(--padding) * 1.5)
+    padding-top: var(--padding)
+    padding-bottom: var(--padding)
+    +flex(center, center)
+    &:nth-child(1)
+      width: var(--col-width-1)
+    &:nth-child(2)
+      width: var(--col-width-2)
+    &:nth-child(3)
+      width: var(--col-width-3)
+  &__img
+    margin-right: 30px
+  &__title
+    color: $accent
+    +bold
+    margin-bottom: 5px
