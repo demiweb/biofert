@@ -164,9 +164,12 @@
     margin-bottom: 20px
 
 .production-icons
+  font-size: 0
   li
     display: inline-block
     margin-bottom: 5px
+    +notlast
+      margin-right: 3px
   a
     +flex(center, center)
     background-color: #e5f6ee
@@ -181,6 +184,19 @@
       background-color: $accent
     .icon
       fill: currentColor
+
+  &--static
+    li
+      +inline-flex(center, center)
+      font-size: 25px
+      padding: 8px
+      width: 38px
+      height: 38px
+      background-color: transparent
+      border: 1px solid #227162
+      color: #77d7c4
+      .icon
+        fill: currentColor
 
 .production-formula
   sub

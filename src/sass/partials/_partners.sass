@@ -1,4 +1,5 @@
 .partner
+  $this: &
   +flex(space-between, center, row, wrap)
   +xs
     align-items: flex-start
@@ -6,6 +7,9 @@
     display: block
   &__img
     width: percentage(5/12)
+    text-align: center
+    .btn
+      margin-top: 15px
     +lg
       padding-right: 15px
     +xs
@@ -28,3 +32,25 @@
   &__text,
   &__logo
     margin-bottom: 20px
+  &__text
+    p
+      +notlast
+        margin-bottom: 30px
+        +sm
+          margin-bottom: 15px
+
+  &--lg
+    align-items: flex-start
+    +lg
+      display: block
+      +clr
+    #{$this}__img
+      +md
+        float: left
+        margin-bottom: 15px
+      +sm
+        width: auto
+        float: none
+    #{$this}__content
+      +lg
+        width: auto

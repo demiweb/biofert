@@ -1,0 +1,31 @@
+---
+title: partner
+page: partner
+hero: {
+  simple: true,
+  title: 'Лебозол',
+  mod: 'hero--simple',
+  breadcrumbs: [
+    { link: 'Главная' },
+    { item: '/' },
+    { link: 'Партнеры' },
+    { item: '/' },
+    { link: 'Лебозол', modLink: 'is-active' }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_s-partner.html" %}
+  
+  {% set sectionGray = true %}
+  {% include "partials/_partners.html" %}
+  
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+

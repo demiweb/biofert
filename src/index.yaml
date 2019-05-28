@@ -7,5 +7,6 @@ PageList:
 - file: news.html
 - file: about.html
 - file: partners.html
+- file: partner.html
 - file: types.html
 - file: production.html
