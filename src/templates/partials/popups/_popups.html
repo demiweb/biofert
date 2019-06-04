@@ -1,0 +1,29 @@
+{{ mixins.popupForm(
+  name = 'price',
+  title = 'Запросить стоимость',
+  mod = popup.price,
+  subttl = 'Заполните форму и мы предоставим полную информацию о товаре',
+  fields = [
+    { type: 'text', placeholder: 'Введите имя', icon: 'user' },
+    { type: 'phone', placeholder: 'Введите телефон', icon: 'call-stroke' },
+    { type: 'email', placeholder: 'Введите E-mail', icon: 'envelope' }
+  ]
+) }}
+
+{{ mixins.popupForm(
+  name = 'call',
+  title = 'Заказать звонок',
+  mod = popup.call ,
+  subttl = 'Заполните форму и наш менеджер свяжется с вами в ближайшее время',
+  fields = [
+    { type: 'text', placeholder: 'Введите имя', icon: 'user' },
+    { type: 'phone', placeholder: 'Введите телефон', icon: 'call-stroke' },
+    {
+      type: 'text',
+      placeholder: 'Когда удобно принять звонок',
+      icon: 'clock',
+      fieldMod: 'js-time-input',
+      attributes: { 'data-type': 'time' }
+    }
+  ]
+) }}

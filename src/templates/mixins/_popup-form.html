@@ -1,0 +1,54 @@
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro popupForm(name, mod, title, subttl, fields) %}
+<!-- begin popup -->
+<div class="popup js-popup{% if mod %} {{ mod }}{% endif %}" data-popup="{{ name }}">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+
+    <div class="popup__logo">
+      <div class="logo logo--light">
+        {{ icon('logo') }}
+      </div>
+    </div>
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          <div class="form__title">
+            <h4 class="h4">{{ title }}</h4>
+            <div class="text text--center text--sm">{{ subttl }}</div>
+          </div>
+          
+
+          {% for i in fields %}
+          <div class="form__field">
+          <!-- begin input -->
+          <div class="input">
+            <input {% if i.fieldMod %}class="{{ i.fieldMod }}"{% endif %} type="{{ i.type }}" placeholder="{{ i.placeholder }}" {% for attr, attr_value in i.attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>
+            {{ icon(i.icon) }}
+          </div>
+          <!-- end input -->
+          </div>
+          {% endfor %}
+
+          <div class="form__btn">
+            {{ btn(
+              title = 'Отправить',
+              mod = 'btn--accent btn--full'
+            ) }}
+          </div>
+
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->
+{% endmacro %}

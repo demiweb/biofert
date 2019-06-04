@@ -4,6 +4,8 @@ import setLazy from './components/setLazy';
 import truncateText from './components/truncateText';
 import toggleMenu from './components/toggleMenu';
 import setTabs from './components/setTabs';
+import setPopups from './components/setPopups';
+import setTimePicker from './components/setTimePicker';
 
 $(function() {
   setTouchClassName();
@@ -13,4 +15,6 @@ $(function() {
   // truncateText();
   toggleMenu();
   setTabs();
+  setPopups();
+  setTimePicker();
 });

@@ -1,0 +1,32 @@
+.form
+  &__field
+    margin-bottom: 25px
+  &__btn
+    padding-top: 15px
+  &__title
+    margin-bottom: 25px
+
+.input
+  position: relative
+  input
+    font-family: inherit
+    font-size: var(--fz-sm)
+    color: $c-text
+    width: 100%
+    background-color: $white
+    border-bottom: 1px solid  $gray-dark
+    height: 30px
+    padding: 5px 0
+    padding-right: 20px
+    +placeholder
+      font-family: inherit
+      color: inherit
+  .icon
+    fill: currentColor
+    position: absolute
+    top: .4em
+    right: 0
+  .icon-call-stroke
+    fill: none
+    stroke: currentColor
+    stroke-width: 2px

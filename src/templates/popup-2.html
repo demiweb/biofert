@@ -1,0 +1,46 @@
+---
+title: Index page
+page: main
+hero: {
+  banner: true
+}
+news: [
+  {
+    img: 'richard-nolan-178668-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер 2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  },
+  {
+    img: 'american-public-power-association-423204-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  },
+  {
+    img: 'agence-producteurs-locaux-damien-kuhn-97729-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер.'
+  },
+  {
+    img: 'viktor-kiryanov-111736-unsplash.jpg',
+    title: 'Органический день поля',
+    text: '2-3 июня 2015 года компания «Биоферт» участвовала в Интернациональном дне поля, который организовывал наш партнер'
+  }
+]
+popup: {
+  call: 'is-active'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_about.html" %}
+  {% include "partials/_types-nav.html" %}
+  {% include "partials/_s-cultures.html" %}
+  {% include "partials/_s-news.html" %}
+  {% include "partials/_partners.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+

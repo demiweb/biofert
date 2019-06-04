@@ -11,3 +11,6 @@ PageList:
 - file: types.html
 - file: production.html
 - file: product.html
+- file: news-item-page.html
+- file: popup-1.html
+- file: popup-2.html
