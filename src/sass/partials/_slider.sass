@@ -50,7 +50,8 @@
     transform: translate(0, -50%)
     height: 30px
     width: 30px
-    border: 2px solid $white
+    color: $white
+    border: 2px solid currentColor
     border-radius: 50%
     +before
       display: inline-block
@@ -66,13 +67,13 @@
   &__prev
     left: 0
     +before
-      +icon-arrow(8, 8, 2, $white, 45)
+      +icon-arrow(8, 8, 2, currentColor, 45)
       transform: translate(0, -50%) rotate(45deg)
       left: 10px
   &__next
     right: 0
     +before
-      +icon-arrow(8, 8, 2, $white, -135)
+      +icon-arrow(8, 8, 2, currentColor, -135)
       transform: translate(0, -50%) rotate(-135deg)
       right: 10px
 
@@ -135,3 +136,44 @@
         img
           filter: grayscale(100%)
           +tr(filter .3s)
+
+  &--more
+    
+    &__wrap
+      --more-arrows-gap: -25px
+      .slick-track
+        margin-left: -15px
+        margin-right: -15px
+        padding-left: 15px
+        padding-right: 15px
+      .slick-slide
+        margin-left: 15px
+        margin-right: 15px
+      .item
+        &__cover-text
+          +lg
+            max-height: 50px
+          +sm
+            margin-bottom: 10px
+      #{$this}__prev,
+      #{$this}__next
+        background-color: transparent
+        color: $accent
+        +xs
+          display: none !important
+      #{$this}__prev
+        left: var(--more-arrows-gap)
+      #{$this}__next
+        right: var(--more-arrows-gap)
+      #{$this}__dots
+        display: none
+        position: relative
+        background-color: transparent
+        button
+          background-color: $accent
+          +before
+            background-color: rgba($accent, .15)
+        +xs
+          display: block
+
+        

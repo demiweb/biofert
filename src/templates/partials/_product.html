@@ -1,0 +1,164 @@
+{%set
+types = [
+  { img: '1.jpg', title: 'Грунтовые' },
+  { img: '2.jpg', title: 'Внекорневые' },
+  { img: '3.jpg', title: 'Специальные' },
+  { img: '4.jpg', title: 'Органические' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+    <div class="container">
+      <div class="section__breadcrumbs">
+        {{ mixins.list(
+          name = 'breadcrumbs',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link: 'Главная' },
+            { item: '/' },
+            { link: 'Продукция', modLink: '' },
+            { link: '/', modLink: 'is-active' },
+            { link: 'Специальные', modLink: '' },
+            { link: '/', modLink: '' },
+            { link: 'ATS solution', modLink: 'is-active' }
+          ]
+        ) }}
+      </div>
+
+      <div class="section__title section__title-left">
+        <h2 class="h2">ATS solution</h2>
+      </div>
+
+      <!-- begin product -->
+      <div class="product">
+        <div class="prodct__top">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="product__item js-lazy" data-background-image="img/bg-section-img.png">
+                <!-- begin item -->
+                <div class="item">
+                  <span class="item__top">BIOFERT NPK 5-10-25</span>
+
+                  <span class="item__middle js-lazy" data-background-image="img/production/bag-1.png">
+                    {# <img data-src="img/production/bag-1.png" alt="" class="js-lazy"> #}
+                    <span class="item__middle-icons">
+                      {{ mixins.list(
+                        name = 'production-icons',
+                        modifications = { wrap: 'production-icons--transp' },
+                        list = [
+                          { link: mixins.icon('beet')  },
+                          { link: mixins.icon('soy')  },
+                          { link: mixins.icon('grapes')  },
+                          { link: mixins.icon('wheat')  },
+                          { link: mixins.icon('sunflower')  },
+                          { link: mixins.icon('corn')  },
+                          { link: mixins.icon('flower')  },
+                          { link: mixins.icon('potatoes')  }
+                        ]
+                      ) }}
+                    </span>
+                  </span>
+
+                  <span class="item__bottom">Специальные</span>
+
+                  
+                </div>
+                <!-- end item -->
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="product__top-right">
+                <div class="product__logo">
+                  <img data-src="img/logo-light.png" alt="" class="js-lazy">
+                </div>
+                <div class="product__btns text-block__btns">
+                  <div class="text-block__btn product__btn">
+                    {{ mixins.btn(
+                      title = 'Запросить стоимость',
+                      mod = 'btn--accent'
+                    ) }}
+                  </div>
+                  <div class="text-block__btn product__btn">
+                    {{ mixins.btn(
+                      title = 'Запросить каталог PDF',
+                      mod = ''
+                    ) }}
+                  </div>
+                </div>
+
+                <div class="product__meta product-meta">
+                  <div class="text text--black">ATS AGRO NS 12:58 (азотно-сірчаний комплекс)</div>
+                  <div class="text">Загальний азот (N) в якості аміачного азоту 12%</div>
+                  <div class="text">Загальна сірка SO3 58%</div>
+                  <div class="text">Рівень pH: 7.0 – 7.8</div>
+                  <div class="text">Температура кристалізації: -5С</div>
+                </div>
+
+                <div class="product__meta product-meta">
+                  <div class="text text--black">НОРМА ВИКОРИСТАННЯ</div>
+                  <div class="text">При внесенні по мерзлоталому грунті – підживлення ріпаку, озимої пшениці - норма внесення АТС – мах 5 % від норми внесення КАС .</div> 
+                  <div class="text">При другому підживленні - 1-2%АТС від норми КАС .</div>
+                </div>
+
+                <div class="product__meta product-meta">
+                  <div class="text text--black">УМОВИ ЗБЕРІГАННЯ</div>
+                  <div class="text">Зберігати в сухому та прохолодному місці</div>
+                  <div class="text">Не допускати заморожування продукту (не нижче 0С)</div>
+                  <div class="text">Контейнер зберігати щільно закритим</div>
+                </div>
+
+                <div class="product__meta-bottom"><strong>Упаковка:</strong> 1300 кг эврокуб . (1000 літрів)</div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__bottom">
+          <div class="product__descr-title">
+            <h5 class="h5 h5--accent">Опис товару:</h5>
+          </div>
+          <p><strong>ATS-AGRO</strong> - чистий, рідкий розчин, який складається з 12% азоту та 58% сірки, та є найпопулярнішим сірковмісним продуктом, який використовується у світовій індустрії добрив. Він стабілізує азот і максимізує його використання та поглинання рослиною.</p>
+          <p><strong>ATS-AGRO</strong> – сумісний з розчинами азотних добрив таких як: КАС -28, КАС -30, КАС -32, аміачна вода, розчин карбаміду та ін. Також його використовують з рідкими азотно-фосфоро-калійними добривами типу РКД-10-34, РКД-11-37 та ін., які є нейтральними і близькими до слабокислих. ATS-AGRO – використовується і у баковій суміші із ґрунтовими гербіцидами.</p>
+          
+        </div>
+      </div>
+      <!-- end product -->
+
+    </div>
+
+  <div class="section__gray-block">
+    <div class="container">
+      <div class="section__title is-center">
+        <h2 class="h2">Возможно вас заинтересуют:</h2>
+      </div>
+
+      {% include "partials/_more-slider.html" %}
+    </div>
+  </div>
+
+  <div class="section__white-block">
+    <div class="container">
+      <!-- begin types -->
+      <div class="types types--sm">
+          {% for i in types %}
+            <!-- begin type -->
+            <a href="#" class="type js-lazy" data-background-image="img/types/{{ i.img }}">
+              <span class="type__title">
+                {{ i.title }}
+              </span>
+            </a>
+            <!-- end type -->
+          {% endfor %}
+      </div>
+      <!-- end types -->
+    </div>
+  </div>
+
+  
+  
+</section>
+<!-- end section -->

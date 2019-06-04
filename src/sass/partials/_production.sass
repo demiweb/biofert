@@ -162,6 +162,7 @@
       font-size: .5em
   &__text
     margin-bottom: 20px
+    max-height: 80px
 
 .production-icons
   font-size: 0
@@ -169,7 +170,7 @@
     display: inline-block
     margin-bottom: 5px
     +notlast
-      margin-right: 3px
+      margin-right: 1px
   a
     +flex(center, center)
     background-color: #e5f6ee
@@ -197,6 +198,11 @@
       color: #77d7c4
       .icon
         fill: currentColor
+
+  &--transp
+    a
+      background-color: transparent
+      border: 1px solid  $accent
 
 .production-formula
   sub
@@ -231,3 +237,75 @@
       // margin-right: 4px 
 
 
+.product
+  --product-margin: 25px
+  +sm
+    --product-margin: 15px
+  &__top-right
+    background-color: $gray
+    height: 100%
+    padding: var(--product-margin)
+    padding-top: calc(var(--product-margin) / 2)
+    position: relative
+    +md
+      margin-top: 50px
+      height: auto
+  &__logo
+    position: absolute
+    bottom: 100%
+    right: 0
+    background-color: $green-lighten
+    padding: 5px 25px
+  &__btns
+    margin-bottom: var(--product-margin)
+  &__btn
+    +lg
+      +notlast
+        margin-bottom: 10px
+    +md
+      +notlast
+        margin-bottom: 0
+        margin-right: 10px
+    +sm
+      +notlast
+        margin-bottom: 10px
+  &__meta
+    margin-bottom: var(--product-margin)
+  &__item
+    +cover
+    background-size: 100% 90%
+    background-position: 50% 100%
+    padding-bottom: 5px
+    height: 100%
+    .item
+      max-width: 385px
+      margin-left: auto
+      margin-right: auto
+      height: 100%
+      margin-bottom: 0
+      &:hover
+        .item__top
+          color: $accent
+          background-color: $white
+          border-bottom-color: $gray-dark
+      &__middle
+        // padding-top: 0
+        flex-grow: 1
+        +flex(flex-end, center, column)
+        padding-bottom: 12px
+        +md
+          padding-top: 70%
+      &__middle-icons
+        // text-align: center
+  &__descr-title
+    margin-bottom: calc(var(--product-margin) / 2)
+  &__bottom
+    padding-top: var(--product-margin)
+    p
+      margin-bottom: var(--product-margin)
+      strong
+        +reg
+        color: $black
+        
+
+.product-meta

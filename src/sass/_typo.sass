@@ -20,6 +20,12 @@ h1, h2, h3, h4, h5, h6
     color: $white
 
 .h5, h5
+  font-size: var(--fz)
+  color: $black
+  text-transform: uppercase
+  +bold
+  &--accent
+    color: $accent
 
 .h6, h6
 
@@ -32,6 +38,8 @@ h1, h2, h3, h4, h5, h6
     text-align: center
   &--white
     color: $white
+  &--black
+    color: $black
 
 .text-block
   --margin-bottom: 35px

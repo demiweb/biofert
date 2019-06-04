@@ -9,7 +9,8 @@ $(function() {
   setTouchClassName();
   setSliders();
   setLazy();
-  truncateText();
+  setTimeout(truncateText, 100);
+  // truncateText();
   toggleMenu();
   setTabs();
 });

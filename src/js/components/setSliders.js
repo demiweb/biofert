@@ -53,8 +53,31 @@ export default function setSliders() {
             }
           }
         ]
+      },
+      'items_more': {
+        slidesToShow: 3,
+        prevArrow: $prev,
+        nextArrow: $next,
+        responsive: [          
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              appendDots: $dots,
+              dots: true,
+              slidesToShow: 1
+            }
+          },
+        ]
       }
     };
+
+    
 
     $(slider).slick(options[name]);
   });

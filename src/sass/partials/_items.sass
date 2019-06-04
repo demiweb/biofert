@@ -10,7 +10,7 @@
   margin-bottom: 30px
   +md
     margin-bottom: 15px
-  +hover
+  &:hover
     #{$this}__top
       color: $white
       background-color: $accent
@@ -26,6 +26,7 @@
     padding-bottom: 5px
     text-transform: uppercase
     color: $accent
+    font-size: var(--fz)
     // display: block
     +flex(center, center)
     +bold
@@ -59,6 +60,7 @@
     position: absolute
     left: 0
     width: 100%
+    font-size: var(--fz)
     top: var(--top-bottom-height)
     bottom: var(--top-bottom-height)
     background-color: rgba($accent, .95)
