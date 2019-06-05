@@ -1,22 +1,38 @@
 {%set
 partners = [
   {
+    img: 'Tea-Leaf.png',
+    imgMod: 'section-img--left-bottom section-img--left-bottom-sm',
     logo: '2.png',
     text: 'Компания Лебозол® уже более 20 лет специализируется на производстве жидких удобрений для внекорневого применения. За это время, продукция компании заняла лидерские позиции в своем сегменте как в Германии, так и натеритории всей Европы...'
   },
   {
+    img: 'big-leaf-1.png',
+    imgMod: 'section-img--right-bottom',
+    imgSm: true,
+    mod: 'z-index-2',
     logo: '5.png',
     text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
   },
   {
+    img: 'paralax-right.png',
+    imgMod: 'section-img--right section-img--right-sm',
+    imgSm: true,
     logo: '4.png',
     text: 'Компания Лебозол® уже более 20 лет специализируется на производстве жидких удобрений для внекорневого применения. За это время, продукция компании заняла лидерские позиции в своем сегменте как в Германии, так и натеритории всей Европы...'
   },
   {
+    img: 'podsolnechnik (1).png',
+    imgMod: 'section-img--left-center',
+    imgSm: true,
+    mod: 'z-index-2',
     logo: '3.png',
     text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
   },
   {
+    img: 'grass-2.png',
+    imgMod: 'section-img--right section-img--right section-img--right-center section-img--right-sm',
+    imgSm: true,
     logo: '1.png',
     text: 'Компания К + S Kali GmbH- немецкий производитель удобрений с давними традициями в горной промышленности, международный лидер по производству калийных удобрений...'
   }
@@ -26,7 +42,7 @@ partners = [
 <!-- begin section -->
 <section class="section section--no-pad">
   {% for i in partners %}
-  <div class="section__block">
+  <div class="section__block section--img {{ i.mod }}">
     <div class="container">
       <!-- begin partner -->
       <div class="partner">
@@ -59,6 +75,8 @@ partners = [
       </div>
       <!-- end partner -->
     </div>
+
+    <div class="section-img js-lazy js-parallax {{ i.imgMod }}" data-background-image="img/side-imgs/{{ i.img }}" {% if i.imgSm %}data-rellax-percentage="0.5"{% endif %}></div>
   </div>
   {% endfor %}
 </section>

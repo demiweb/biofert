@@ -1,0 +1,31 @@
+<!-- begin section -->
+<section class="section section--full is-center js-lazy" data-background-image="img/bg-404.jpg">
+  <div class="container">
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'Главная' },
+          { item: '/' },
+          { link: '404', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="section__title is-center">
+      <h2 class="h2 h2--white">Нажаль, сторінка, яку ви шукали, не знайдена:(</h2>
+    </div>
+
+    <img data-src="img/404.png" alt="" class="js-lazy">
+
+    <div class="section__btn-block">
+      <div class="text text--white text--center">Але, ви можете почати спочатку:</div>
+      {{ mixins.btn(
+        title = 'Повернутися на головну',
+        mod = 'btn--white'
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->

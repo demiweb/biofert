@@ -14,3 +14,4 @@ PageList:
 - file: news-item-page.html
 - file: popup-1.html
 - file: popup-2.html
+- file: 404.html

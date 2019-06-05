@@ -34,6 +34,9 @@
     padding-bottom: var(--section-padding)
     &:nth-child(odd)
       background-color: $gray
+  &__btn-block
+    .text
+      margin-bottom: 15px
   &__types
     margin-bottom: 40px
     +md
@@ -49,6 +52,8 @@
   &--no-pad-bottom
     padding-bottom: 0
   &--img
+    z-index: 1
+    position: relative
     .container
       position: relative
       z-index: 1
@@ -64,6 +69,10 @@
       padding-bottom: 0
     &__top
       background-image: radial-gradient(circle, rgba(#efefef,1) 0%, rgba(#dddddd,1) 100%)
+  &--full
+    padding-bottom: 100px
+    .breadcrumbs
+      margin-bottom: 100px
 
 .section-img
   position: absolute
@@ -91,6 +100,16 @@
     left: 0
     +md
       display: none
+  &--right-lg
+    height: 90%
+    width: 200px
+  &--right-sm
+    width: 200px
+    height: 200px
+  &--right-xs
+    width: 100px
+    height: 100px
+  
   &--right-center
     bottom: 7%
     right: 0
@@ -121,9 +140,45 @@
     padding-top: 18%
     +md
       display: none
+  &--left-bottom-sm
+    width: 200px
+    height: 200px
   &--left-center
     left: 0
     top: 50%
-    transform: translate(0, -50%)
+    // transform: translate(0, -50%)
+    margin-top: -150px
     +lg
       display: none
+  &--left-top
+    top: 0
+    left: 0
+    width: 100px
+    height: 100px
+  &--full
+    width: 200px
+    height: 200px
+  &--full-left-1,
+  &--full-left-2
+    left: 0
+  
+  &--full-left-1
+    top: 10%
+  &--full-left-2
+    top: 30%
+  &--full-right-1,
+  &--full-right-2
+    right: 0
+    text-align: right
+    background-position: 100% 50%
+  &--full-right-1
+    top: 10%
+  &--full-right-2
+    top: 40%
+  &--full-lg
+    height: 400px
+
+  &--left-sm
+    width: 200px
+    height: 200px
+    padding-top: 10%
